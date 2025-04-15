@@ -1,6 +1,6 @@
 package com.gevernova.workshopTwo;
 
-public class Cart {
+public class Cart implements Displayable{
     public String name;
 //    private List<Product> products;
     private  Product arr[];
@@ -36,6 +36,20 @@ public class Cart {
 
         }
     }
+    public void removeProduct(Product product){
+        for(int i=0;i<orderNumber-1;i++){
+            if(product.equals(arr[i])){
+                for(int j=i+1;j<orderNumber;j++) {
+                    arr[j - 1] = arr[j];
+                }
+                arr[orderNumber - 1] = null;
+                orderNumber--;
+                System.out.println(product.getName() + " removed from cart.");
+                return;
+            }
+        }
+        System.out.println(product.getName() + " not found in cart.");
+    }
     public void displayProducts(){
         /*for(Product p:products){
             System.out.println(this.name +" Product name- "+p.getName()+" of $"+p.getPrice());
@@ -55,19 +69,11 @@ public class Cart {
         }
         System.out.println("Total cost of all products in " + name + " is: $" + sum);
     }
-    public void removeProduct(Product product){
-        for(int i=0;i<orderNumber-1;i++){
-            if(product.equals(arr[i])){
-                for(int j=i+1;j<orderNumber;j++) {
-                    arr[j - 1] = arr[j];
-                }
-                arr[orderNumber - 1] = null;
-                orderNumber--;
-                System.out.println(product.getName() + " removed from cart.");
-                return;
-            }
-        }
-        System.out.println(product.getName() + " not found in cart.");
+
+    @Override
+    public void displayDetails() {
+        displayProducts();
+        totalCost();
     }
 
     public String getName() {

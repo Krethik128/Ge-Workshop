@@ -2,8 +2,8 @@ package com.gevernova.workshopTwo;
 
 //Create classes Product, Cart, and Customer.
 //Let a customer add/remove products from a cart and calculate the total price.
-public class Product {
-    private String name;
+public class Product implements Displayable{
+    private final String name;
     private int price;
     private int quantity;
 
@@ -27,5 +27,10 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("- " + name + ", Quantity: " + quantity + ", Total: $" + (price * quantity));
     }
 }
