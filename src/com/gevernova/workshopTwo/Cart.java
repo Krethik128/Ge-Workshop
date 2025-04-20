@@ -2,14 +2,12 @@ package com.gevernova.workshopTwo;
 
 public class Cart implements Displayable{
     public String name;
-//    private List<Product> products;
-    private  Product arr[];
+    private  Product[] arr;
     private int orderNumber=0;
     private final int maxsize=10;
 
     public Cart(String n) {
-        name = n;
-//        this.products=new ArrayList<>();
+        this.name=n;
         this.arr=new Product[maxsize];
     }
 
@@ -51,9 +49,6 @@ public class Cart implements Displayable{
         System.out.println(product.getName() + " not found in cart.");
     }
     public void displayProducts(){
-        /*for(Product p:products){
-            System.out.println(this.name +" Product name- "+p.getName()+" of $"+p.getPrice());
-        }*/
         for (int i = 0; i < orderNumber; i++) {
             if (arr[i] != null) {
                 System.out.println(name + " - Product: " + arr[i].getName() + ", Quantity: " + arr[i].getQuantity() + ", Total: $" + (arr[i].getPrice() * arr[i].getQuantity()));

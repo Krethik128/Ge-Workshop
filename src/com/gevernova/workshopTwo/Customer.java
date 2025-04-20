@@ -3,19 +3,16 @@ package com.gevernova.workshopTwo;
 //Create classes Product, Cart, and Customer.
 //Let a customer add/remove products from a cart and calculate the total price.
 public class Customer implements Displayable {
-    private String name;
-//    public List<Cart> cart;
+    private final String name;
     public Cart[] carts;
     private int cartCount;
     private static final int MAX_CARTS = 10;
 
     public Customer(String name) {
         this.name = name;
-//        this.cart = new ArrayList<>();
         this.carts=new Cart[MAX_CARTS];
     }
     public void addCart(Cart cart){
-//        cart.add(name);
         if(cartCount<MAX_CARTS){
             carts[cartCount++]=cart;
         }
