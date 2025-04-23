@@ -29,6 +29,13 @@ public class MostFrequentChar {
 
             }
         }
+        ArrayList<Character> newlist=new ArrayList<>();
+        for(Character key:map.keySet()){ //Can use a HashMap traversing
+            if(map.get(key)==maxCount){
+                newlist.add(key);
+            }
+        }
+        System.out.println(newlist); // Print the list having max chars
 
 //        for(Map.Entry<Character,Integer> entry: map.entrySet() ){
 //            char key= entry.getKey();
