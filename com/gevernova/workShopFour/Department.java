@@ -3,7 +3,7 @@ package gevernova.workShopFour;
 import java.util.*;
 import java.util.List;
 
-public class Department{
+public class Department implements Methods{
 	String deptName;
 	List<Employee> employees;
 
@@ -18,6 +18,7 @@ public class Department{
 		return deptName;
 	}
 
+	@Override
 	public void getHighestSalary(){
 		double maxSalary=0;
 		String name=" ";
@@ -27,7 +28,7 @@ public class Department{
 				name=emp.getName();
 			}
 		}
-		System.out.println("Maximum slaray of "+deptName+" is "+name+" of salary "+maxSalary);
+		System.out.println("Maximum salary of "+deptName+" is "+name+" of salary "+maxSalary);
 	}
 	public void SetValues(ArrayList<Employee> details){
         details.addAll(employees);
