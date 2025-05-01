@@ -26,7 +26,6 @@ public class MostFrequentChar {
                 else if(map.get(ch)==maxCount){
                     list.add(ch);
                 }
-
             }
         }
         ArrayList<Character> newlist=new ArrayList<>();
@@ -37,7 +36,7 @@ public class MostFrequentChar {
         }
         System.out.println(newlist); // Print the list having max chars
 
-//        for(Map.Entry<Character,Integer> entry: map.entrySet() ){
+//        for(Map.Entry<Character,Integer> entry: map.entrySet()){
 //            char key= entry.getKey();
 //            int val=entry.getValue();
 //            if(val==maxCount){
