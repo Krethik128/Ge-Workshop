@@ -1,4 +1,4 @@
-package com.gevernova.workshopTwo;
+package gevernova.workshopTwo;
 
 public class Main {
     public static void main(String[] args) {

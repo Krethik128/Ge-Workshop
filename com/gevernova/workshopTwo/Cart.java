@@ -1,4 +1,4 @@
-package com.gevernova.workshopTwo;
+package gevernova.workshopTwo;
 
 public class Cart implements Displayable{
     public String name;

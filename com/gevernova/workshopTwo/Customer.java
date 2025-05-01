@@ -1,4 +1,4 @@
-package com.gevernova.workshopTwo;
+package gevernova.workshopTwo;
 
 //Create classes Product, Cart, and Customer.
 //Let a customer add/remove products from a cart and calculate the total price.
