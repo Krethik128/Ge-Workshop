@@ -29,7 +29,6 @@ public class UsingJava8 {
 //       		.sorted(Comparator.comparingDouble(Employee::getSalary))
 //               .limit(1)
 //               .forEach(x->System.out.println(x.getName()+" "+x.getSalary()));
-
             Employee miniSalaryEmpDept1 = Collections.min(dept1Details, Comparator.comparingDouble(Employee::getSalary));
             System.out.println("Min salary in dept1: " + miniSalaryEmpDept1.getName() + " " + miniSalaryEmpDept1.getSalary());
 
