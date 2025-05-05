@@ -2,7 +2,7 @@ package gevernova.workShopStreams.employees;
 
 import java.util.List;
 
-class Employee {
+public class Employee {
     private int id;
     private String name;
     private String department;
@@ -10,8 +10,9 @@ class Employee {
     private double salary;
     private String city;
     private List<String> emails;
+    private String email;
 
-    public Employee(int id, String name,String department ,int age,double salary , String city, List<String> emails) {
+    public Employee(int id, String name, String department ,int age,double salary , String city, List<String> emails) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -19,6 +20,10 @@ class Employee {
         this.department = department;
         this.city = city;
         this.emails = emails;
+    }
+    public Employee(String name, String email) {
+        this.name = name;
+        this.email = email;
     }
 
     public int getId() {
@@ -47,5 +52,9 @@ class Employee {
 
     public List<String> getEmails() {
         return emails;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
